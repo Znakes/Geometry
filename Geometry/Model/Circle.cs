@@ -1,5 +1,4 @@
-﻿using Geometry.Handlers;
-using System;
+﻿using System;
 
 namespace Geometry.Model
 {
@@ -14,9 +13,6 @@ namespace Geometry.Model
             Radius = radius;
         }
 
-        public void Accept(IShapeVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
+        public double GetArea() => Math.PI * Radius * Radius;
     }
 }

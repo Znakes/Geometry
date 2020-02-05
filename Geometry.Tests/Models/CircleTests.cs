@@ -27,5 +27,15 @@ namespace Geometry.Tests.Models
             // Assert
             Assert.AreEqual(radius, circle.Radius);
         }
+
+        [TestCase(10.0, 100.0 * Math.PI)]
+        [TestCase(4.0, 16.0 * Math.PI)]
+        [TestCase(1.0, Math.PI)]
+        public void ShouldCalculateAreaOfCircle(double radius, double expectedArea)
+        {
+            var shape = new Circle(radius);
+
+            Assert.AreEqual(expectedArea, shape.GetArea());
+        }
     }
 }
